@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>연산</title>
+		<meta name="description" content="">
+		<meta name="author" content="user1">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+
+
+	<body>
+  <h2>배열<h2>
+  <script>
+    /*
+     배열만들기
+     var arr = [];
+
+     var arr = new Array();
+
+  var fruits = [];
+  fruits[0]='사과';
+  fruits[1]='배';
+  fruits[2]='바나나';
+     */
+   var fruits = ['사과','배','바나나','딸기'];
+   var animals = ['사자','호랑이','곰'];
+
+
+   var amount = fruits.length;
+   var newStr = fruits.join('/'); //배열사이에 붙이기
+   var newArr = fruits.reverse(); //역순
+   var newArr1 = fruits.sort(function(a,b){
+        return b-a;  //정렬 숫자만 가능
+   });
+  var newArr3 = fruits.concat(animals);  // 합치기
+  var newArr4 = fruits.slice(1,3);  // 원본유지, 1번부터 3번쨰 이전 까지 자른다. (slice는 원본을 자르지 않는다.)
+  var newArr5 = fruits.splice(1,3);  // 원본손상, 1번째부터 3번째까지
+
+
+  document.write(fruits+'<br>');
+  document.write(fruits[0]+'<br>');
+  document.write(amount+'<br>');
+  document.write(newStr+'<br>');
+  document.write(newArr+'<br>');
+  document.write(newArr1+'<br>');
+  document.write(newArr3+'<br>');
+  document.write(newArr4+'<br>');
+  document.write(newArr5+'<br>');
+
+  </script>
+
+    <h2>갑추가하기 -push / unshift </h2>
+    <p>기존의 값 앞/뒤에 추가한다</p>
+    <script>
+      var beers = ['하이네켄','코로나','스텔라','카스','테라'];
+      beers.push('산미구엘','제주비어');  // 값을 뒤에 추가하기
+      beers.unshift('칭따오','하얼빈');  // 값을 앞에 추가하기
+      document.write(beers);
+    </script>
+     <h2>갑삭제하기-pop </h2>
+     <p>기존의 맨 뒤에서 삭제한다</p>
+      <script>
+      var beers = ['하이네켄','코로나','스텔라','카스','테라'];
+      beers.pop();
+      document.write(beers);
+      </script>
+
+     <h2>갑삭제하기-shift </h2>
+     <p>기존의 맨 앞에서 삭제한다</p>
+     <script>
+      var beers = ['하이네켄','코로나','스텔라','카스','테라'];
+      beers.shift();
+      document.write(beers);
+      </script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
