@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <h2>문자열</h2>
+  <script>
+     var str = 'hello world';
+     var str1 = 'javascript';
+     var str2 = str.indexOf('worlds'); // 'world'가 몇번째에 있니!? 공백도 포함해서 갯수를 센다.
+                                        // 없을 경우는 -1 이 찍힌다.
+
+     var newStr1 = str.concat(str1);  //문자열 붙이기
+     var n = str.charAt(2); //0부터 시작하니 l 이 된다. // 몇번째에 뭐가 있니!?
+     console.log(n);
+     console.log(newStr1);
+     console.log(str2);
+
+  </script>
+    <h2>타이머</h2>
+   딱 한번만 시간을 재고 싶을 때 setTimeout을 사용합니다.
+  <script>
+    // setTimeout(할일,시간);
+    // 시간이 지나면 할일  = 함수
+    // function(){실제로 할일}
+    // 3초 3000 (밀리세컨드)
+    // 실제로 할일 = alert("테스트");
+
+    var timer =  setTimeout(function(){alert("테스트"
+                            );},3000);
+
+    // clearTimeout(할일의 이름); // 초기화
+
+     clearTimeout(timer);
+
+     /* 일정시간마다 할일 */
+
+     /*
+      setInterval(할일,시간);
+      clearInterval(이름);
+     */
+    var timer2 = setInterval(function(){alert("테스트");},3000);
+    clearInterval(timer2);
+   </script>
+</body>
+</html>
